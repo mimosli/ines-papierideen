@@ -1,36 +1,119 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    line-height: 1.6;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* HEADER */
+
 header {
-    background: #f3c6d3;
-    padding: 20px;
-    text-align: center;
+  background: #7c2f3a;
+  color: white;
+  padding: 15px;
+  text-align: center;
 }
 
 nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
+
+/* HERO */
 
 .hero {
-    background: #fde8ef;
-    padding: 60px 20px;
-    text-align: center;
+  background: url("images/karte1.jpg") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
 }
 
-section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
+.hero h2 {
+  font-size: 2.5rem;
 }
+
+/* CONTENT */
+
+.content {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* GALERIE */
+
+.gallery {
+  padding: 40px 20px;
+  background: #f6f6f6;
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* KONTAKT */
+
+.contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+button {
+  background: #7c2f3a;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5e222b;
+}
+
+/* FOOTER */
 
 footer {
-    background: #eee;
-    text-align: center;
-    padding: 15px;
+  background: #eee;
+  text-align: center;
+  padding: 15px;
+}
+
+/* MOBILE FRIENDLY */
+
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
 }
