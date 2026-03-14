@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geldgeschenke – Ines Papierideen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">Ines Papierideen</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/#hero">Start</a></li>
+    <li><a href="/#about">Über mich</a></li>
+    <li><a href="/#angebot">Angebot</a></li>
+    <li><a href="/#kategorien">Kategorien</a></li>
+    <li><a href="/#team">Team</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <h1>Geldgeschenke</h1>
+  <p>Mehr als ein Schein – kreative Verpackungsideen, die begeistern.</p>
+</section>
+
+<section class="gallery-section">
+  <a href="/" class="back-link">← Zurück zur Startseite</a>
+
+  <div class="masonry-grid">
+    <img src="/images/Geldgeschenke/IMG_20210912_081838_edited.jpg"                        alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/IMG_20220625_092438.jpg"                               alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/IMG_20220625_092519.jpg"                               alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/IMG_20220625_092545.jpg"                               alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/IMG_20220625_092555.jpg"                               alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/IMG_20220815_201738.jpg"                               alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/IMG_20220815_203234_edited.jpg"                        alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/IMG_20220815_203827.jpg"                               alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/WhatsApp%20Image%202021-02-01%20at%2019.01.08%20(1).jpeg" alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/WhatsApp%20Image%202021-02-01%20at%2019.01_edited.jpg" alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/WhatsApp%20Image%202021-02-16%20at%2022.45.32.jpeg"   alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/WhatsApp%20Image%202021-02-16%20at%2022.45_edited.jpg" alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/WhatsApp%20Image%202021-02-22%20at%2016.59_edited.jpg" alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/WhatsApp%20Image%202021-02-22%20at%2017.00_edited.jpg" alt="Geldgeschenk" onclick="openLightbox(this.src)">
+    <img src="/images/Geldgeschenke/WhatsApp%20Image%202021-02-22%20at%2017.04_edited.jpg" alt="Geldgeschenk" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ines Papierideen &nbsp;|&nbsp; Mit ♥ handgemacht</p>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Vergrößerte Ansicht">
+</div>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  btn.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => links.classList.remove('open'))
+  );
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>

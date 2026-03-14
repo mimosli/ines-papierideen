@@ -2,62 +2,242 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Ines Papierideen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+  <title>Ines Papierideen – Handgemachte Geschenkideen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
-<header>
-  <h1>Ines Papierideen</h1>
-  <nav>
-    <a href="#start">Start</a>
-    <a href="#galerie">Galerie</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
-</header>
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <a href="/" class="nav-logo">Ines Papierideen</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#hero">Start</a></li>
+    <li><a href="#about">Über mich</a></li>
+    <li><a href="#angebot">Angebot</a></li>
+    <li><a href="#kategorien">Kategorien</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
 
-<!-- HERO -->
-<section class="hero" id="start">
-  <h2>Handgemachte Papierideen mit Herz</h2>
-  <p>Individuelle Karten & kreative Designs</p>
-</section>
-
-<!-- INFO -->
-<section class="content">
-  <h2>Willkommen</h2>
-  <p>
-    Dein Glückwunsch soll nicht von der Stange sein?  
-    Ich gestalte liebevoll handgemachte Karten für jeden Anlass.
-  </p>
-</section>
-
-<!-- GALERIE -->
-<section class="gallery" id="galerie">
-  <h2>Meine Arbeiten</h2>
-
-  <div class="gallery-grid">
-    <img src="images/karte1.jpg" alt="Karte 1">
-    <img src="images/karte2.jpg" alt="Karte 2">
-    <img src="images/karte3.jpg" alt="Karte 3">
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>Willkommen<br>bei Ines-<br>Papierideen</h1>
+    <p class="hero-subtitle">Individuelle &amp; persönliche Geschenkideen aus Deiner Nachbarschaft</p>
+    <p class="hero-text">
+      Wir sind eine kleine Kreativwerkstatt, die mit Papier, Folie und Farbe
+      Deine Geschenke veredelt. Bei Ines-Papierideen steht Individualität
+      und Originalität im Mittelpunkt. Wir bereiten Vorschläge vor und
+      stimmen Deine Ideen genau auf Dich ab. Melde Dich bei Ines und
+      entdecke das Universum rund um Papierideen.
+    </p>
+    <a href="#kontakt" class="btn-hero">Kontakt</a>
   </div>
 </section>
 
-<!-- KONTAKT -->
-<section class="contact" id="kontakt">
-  <h2>Kontakt</h2>
-
-  <form>
-    <input type="text" placeholder="Dein Name" required>
-    <input type="email" placeholder="Deine E-Mail" required>
-    <textarea placeholder="Deine Nachricht" required></textarea>
-    <button>Senden</button>
-  </form>
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-image">
+      <img src="/images/Team/IMG_20210220_190318__01__01_edited_edited.jpg" alt="Ines – die Kreative">
+    </div>
+    <div class="about-text">
+      <h2>Über Ines-Papierideen</h2>
+      <h3>Hinter den Kulissen</h3>
+      <p>
+        Bei Ines-Papierideen sind wir einem einzigartigen und persönlichen
+        Service verschrieben. Wenn Du uns einmal besucht hast, kannst Du
+        sicher sein, dass Du immer die allerbeste Aufmerksamkeit bekommst.
+      </p>
+      <p>
+        Seit unserer Gründung 2021 haben wir es uns zur Aufgabe gemacht,
+        alle Vorlieben und Wünsche bestmöglich umzusetzen – mit großzügigen
+        Angeboten, die perfekt zum Budget passen.
+        Nimm Kontakt auf und lass uns gemeinsam die perfekte Papieridee finden.
+      </p>
+      <a href="#kontakt" class="btn-outline-white">Kontakt aufnehmen</a>
+    </div>
+  </div>
 </section>
 
+<!-- ===== ANGEBOT TEXT ===== -->
+<section class="offer-text" id="angebot">
+  <div class="offer-inner">
+    <h2>Mein Angebot für Dich</h2>
+    <p>
+      Dein Glückwunsch soll nicht von der Stange sein?<br>
+      Dann schau doch gern bei mir vorbei.
+    </p>
+    <p>
+      Wenn Du auf der Suche nach persönlichen und außergewöhnlichen
+      Glückwunschkarten bist oder eine besondere Geschenkverpackung suchst,
+      dann bist Du bei mir genau richtig.
+    </p>
+    <p>
+      Einladungskarten, die in Erinnerung bleiben, Geldgeschenke, die Freude
+      machen und einzigartig sind, findest Du bei mir.<br>
+      Egal zu welchem Anlass – ob Hochzeit, Geburtstag, Geburt, Taufe,
+      Konfirmation, Kommunion, Ostern, Weihnachten …
+    </p>
+    <p>
+      Du hast besondere Ideen oder Wünsche?<br>
+      Kein Problem, gerne arbeite ich diese ein.
+    </p>
+    <p class="offer-closing">Gemeinsam finden wir das perfekte Papiergeschenk.</p>
+  </div>
+</section>
+
+<!-- ===== KATEGORIEN ===== -->
+<section id="kategorien">
+
+  <!-- Glückwunschkarten -->
+  <div class="category-card">
+    <div class="category-image">
+      <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_215956.jpg" alt="Glückwunschkarten">
+    </div>
+    <div class="category-content">
+      <h3>Glückwunschkarten</h3>
+      <p>
+        Handgemachte Karten für jeden Anlass – Geburtstag, Hochzeit, Geburt,
+        Taufe oder einfach so. Jede Karte ist ein kleines Kunstwerk, das direkt
+        vom Herzen kommt und lange in Erinnerung bleibt.
+      </p>
+      <a href="/glueckwunschkarten" class="btn-category">Mehr entdecken</a>
+    </div>
+  </div>
+
+  <!-- Einladungskarten -->
+  <div class="category-card reverse">
+    <div class="category-image">
+      <img src="/images/Einladungskarten/WhatsApp%20Image%202021-02-01%20at%2019.06_edited.jpg" alt="Einladungskarten">
+    </div>
+    <div class="category-content">
+      <h3>Einladungskarten</h3>
+      <p>
+        Einladungen, die in Erinnerung bleiben. Ob Hochzeit, Geburtstag,
+        Kommunion oder Konfirmation – ich gestalte Einladungen ganz nach
+        Eurem Thema, Stil und Budget. Handgemacht mit viel Liebe zum Detail.
+      </p>
+      <a href="/einladungskarten" class="btn-category">Mehr entdecken</a>
+    </div>
+  </div>
+
+  <!-- Geldgeschenke -->
+  <div class="category-card">
+    <div class="category-image">
+      <img src="/images/Geldgeschenke/IMG_20210912_081838_edited.jpg" alt="Geldgeschenke">
+    </div>
+    <div class="category-content">
+      <h3>Geldgeschenke</h3>
+      <p>
+        Du möchtest Geld verschenken, aber mit dem gewissen Extra?
+        Ich mache alles möglich – was einst ein schlichter Schein war,
+        wird bei Ines-Papierideen zum echten Highlight des Abends.
+      </p>
+      <a href="/geldgeschenke" class="btn-category">Mehr entdecken</a>
+    </div>
+  </div>
+
+  <!-- Dekoratives -->
+  <div class="category-card reverse">
+    <div class="category-image">
+      <img src="/images/Dekoratives/IMG-20220611-WA0006.jpeg" alt="Dekoratives">
+    </div>
+    <div class="category-content">
+      <h3>Dekoratives</h3>
+      <p>
+        Windlichter, Gläser, Tassen und mehr – liebevoll dekoriert und
+        individuell gestaltet. Dinge, die man nicht kaufen kann, weil sie
+        von Herzen kommen. Das perfekte Geschenk für jeden Anlass.
+      </p>
+      <a href="/dekoratives" class="btn-category">Mehr entdecken</a>
+    </div>
+  </div>
+
+  <!-- Textiles -->
+  <div class="category-card">
+    <div class="category-image">
+      <img src="/images/Textiles/IMG_20210110_141941.jpg" alt="Textiles">
+    </div>
+    <div class="category-content">
+      <h3>Textiles</h3>
+      <p>
+        Shirts, Taschen, Babykleidung und mehr – individuell mit Schablone,
+        Folie oder Farbe gestaltet. Einzigartig wie Du. Egal ob klein oder
+        groß, jedes Stück ist ein echtes Unikat.
+      </p>
+      <a href="/textiles" class="btn-category">Mehr entdecken</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="team" id="team">
+  <h2>Unser Team</h2>
+  <p class="team-subtitle">Exzellenz an erster Stelle</p>
+  <div class="team-grid">
+
+    <div class="team-member">
+      <img src="/images/Team/IMG_20210220_190318__01__01_edited_edited.jpg" alt="Ines">
+      <div class="team-member-info">
+        <h4>Ines die Kreative</h4>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="/images/Team/WhatsApp%20Image%202021-02-14%20at%2014.03.42%20(1).jpeg" alt="Lisa">
+      <div class="team-member-info">
+        <h4>Lisa der Nerd</h4>
+        <p>Administratorin</p>
+      </div>
+    </div>
+
+    <div class="team-member">
+      <img src="/images/Team/WhatsApp%20Image%202021-02-16%20at%2021.04.14%20(1).jpeg" alt="Heide">
+      <div class="team-member-info">
+        <h4>Heide die Schreckliche</h4>
+        <p>Qualitätskontrolle</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== KONTAKT ===== -->
+<section class="contact" id="kontakt">
+  <div class="contact-inner">
+    <h2>Kontakt</h2>
+    <form action="/kontakt" method="POST">
+      <input type="text"  name="name"    placeholder="Dein Name"     required>
+      <input type="email" name="email"   placeholder="Deine E-Mail"  required>
+      <textarea            name="message" placeholder="Deine Nachricht" rows="6" required></textarea>
+      <button type="submit">Nachricht senden</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
 <footer>
-  <p>© 2026 Ines Papierideen</p>
+  <p>© 2026 Ines Papierideen &nbsp;|&nbsp; Mit ♥ handgemacht</p>
 </footer>
+
+<script>
+  // Mobile hamburger menu
+  const btn = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  btn.addEventListener('click', () => links.classList.toggle('open'));
+
+  // Close on link click
+  links.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => links.classList.remove('open'))
+  );
+</script>
 
 </body>
 </html>

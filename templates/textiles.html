@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Textiles – Ines Papierideen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">Ines Papierideen</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/#hero">Start</a></li>
+    <li><a href="/#about">Über mich</a></li>
+    <li><a href="/#angebot">Angebot</a></li>
+    <li><a href="/#kategorien">Kategorien</a></li>
+    <li><a href="/#team">Team</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <h1>Textiles</h1>
+  <p>Shirts, Taschen, Babykleidung – individuell bedruckt und einzigartig wie Du.</p>
+</section>
+
+<section class="gallery-section">
+  <a href="/" class="back-link">← Zurück zur Startseite</a>
+
+  <div class="masonry-grid">
+    <img src="/images/Textiles/IMG_20210110_141941.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210215_185636.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210215_185723.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210215_185847.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210215_185855.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210328_143522.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210328_143549.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210328_143729.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210328_143915.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210526_230300.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210526_230314.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20210902_172930.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20211006_211230.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20211006_211554.jpg"          alt="Textiles" onclick="openLightbox(this.src)">
+    <img src="/images/Textiles/IMG_20211006_211554_edited.jpg"   alt="Textiles" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ines Papierideen &nbsp;|&nbsp; Mit ♥ handgemacht</p>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Vergrößerte Ansicht">
+</div>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  btn.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => links.classList.remove('open'))
+  );
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>

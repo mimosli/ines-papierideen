@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glückwunschkarten – Ines Papierideen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">Ines Papierideen</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/#hero">Start</a></li>
+    <li><a href="/#about">Über mich</a></li>
+    <li><a href="/#angebot">Angebot</a></li>
+    <li><a href="/#kategorien">Kategorien</a></li>
+    <li><a href="/#team">Team</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <h1>Glückwunschkarten</h1>
+  <p>Handgemachte Karten für jeden Anlass – jede ein Unikat mit Herz.</p>
+</section>
+
+<section class="gallery-section">
+  <a href="/" class="back-link">← Zurück zur Startseite</a>
+
+  <div class="masonry-grid">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_215956.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_220030.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_220049.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_220105.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210711_160410_edited.jpg"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210711_160504_edited.jpg"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210807_144743.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210812_152722.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210814_142232_edited.jpg"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210814_142244.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210814_142330_edited.png"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210820_083141_410_208511648428599.webp" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210926_125455_edited.jpg"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01.07.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01.08.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01.09.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01_edited.jpg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.03_edited.jpg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.06_edited.jpg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-16%20at%2022.45_edited.jpg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/IMG-20260118-WA0002.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+    <img src="/images/IMG-20260118-WA0003.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ines Papierideen &nbsp;|&nbsp; Mit ♥ handgemacht</p>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Vergrößerte Ansicht">
+</div>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  btn.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => links.classList.remove('open'))
+  );
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>

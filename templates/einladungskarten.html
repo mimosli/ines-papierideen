@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Einladungskarten – Ines Papierideen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">Ines Papierideen</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/#hero">Start</a></li>
+    <li><a href="/#about">Über mich</a></li>
+    <li><a href="/#angebot">Angebot</a></li>
+    <li><a href="/#kategorien">Kategorien</a></li>
+    <li><a href="/#team">Team</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <h1>Einladungskarten</h1>
+  <p>Einladungen, die Vorfreude wecken – handgemacht für Euren besonderen Anlass.</p>
+</section>
+
+<section class="gallery-section">
+  <a href="/" class="back-link">← Zurück zur Startseite</a>
+
+  <div class="masonry-grid">
+    <img src="/images/Einladungskarten/WhatsApp%20Image%202021-02-01%20at%2019.03.13.jpeg" alt="Einladungskarte" onclick="openLightbox(this.src)">
+    <img src="/images/Einladungskarten/WhatsApp%20Image%202021-02-01%20at%2019.06_edited.jpg" alt="Einladungskarte" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ines Papierideen &nbsp;|&nbsp; Mit ♥ handgemacht</p>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Vergrößerte Ansicht">
+</div>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  btn.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => links.classList.remove('open'))
+  );
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>

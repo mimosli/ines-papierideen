@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dekoratives – Ines Papierideen</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">Ines Papierideen</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="/#hero">Start</a></li>
+    <li><a href="/#about">Über mich</a></li>
+    <li><a href="/#angebot">Angebot</a></li>
+    <li><a href="/#kategorien">Kategorien</a></li>
+    <li><a href="/#team">Team</a></li>
+    <li><a href="/#kontakt">Kontakt</a></li>
+  </ul>
+</nav>
+
+<section class="page-hero">
+  <h1>Dekoratives</h1>
+  <p>Windlichter, Gläser, Tassen – liebevoll gestaltet und einzigartig.</p>
+</section>
+
+<section class="gallery-section">
+  <a href="/" class="back-link">← Zurück zur Startseite</a>
+
+  <div class="masonry-grid">
+    <img src="/images/Dekoratives/IMG-20220611-WA0006.jpeg"                   alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG-20220702-WA0004_edited_edited.jpg"       alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG-20220828-WA0004_edited_edited.jpg"       alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20210914_223415.jpg"                     alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20211114_112458.jpg"                     alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20211114_121520.jpg"                     alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20211114_121532.jpg"                     alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20211114_121605.jpg"                     alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20211114_121651.jpg"                     alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20211114_121712.jpg"                     alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20211114_121726.jpg"                     alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20211114_121743.jpg"                     alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20211114_121743_edited.jpg"              alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20220224_174021_edited_edited.jpg"       alt="Dekoratives" onclick="openLightbox(this.src)">
+    <img src="/images/Dekoratives/IMG_20220619_141942_edited_edited.jpg"       alt="Dekoratives" onclick="openLightbox(this.src)">
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Ines Papierideen &nbsp;|&nbsp; Mit ♥ handgemacht</p>
+</footer>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Vergrößerte Ansicht">
+</div>
+
+<script>
+  const btn = document.getElementById('hamburger');
+  const links = document.getElementById('nav-links');
+  btn.addEventListener('click', () => links.classList.toggle('open'));
+  links.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => links.classList.remove('open'))
+  );
+
+  function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>
