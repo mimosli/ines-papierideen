@@ -4,42 +4,41 @@ import os
 app = Flask(__name__)
 
 
-# Serve images directly from the images/ folder
+# Serve images directly from the images/ folder (supports subfolders + URL-encoded names)
 @app.route('/images/<path:filename>')
 def serve_image(filename):
     return send_from_directory('images', filename)
 
 
-# ===== MAIN PAGES =====
+# ===== PAGES =====
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
-
 @app.route('/glueckwunschkarten')
 def glueckwunschkarten():
     return render_template('glueckwunschkarten.html')
-
 
 @app.route('/einladungskarten')
 def einladungskarten():
     return render_template('einladungskarten.html')
 
-
 @app.route('/geldgeschenke')
 def geldgeschenke():
     return render_template('geldgeschenke.html')
-
 
 @app.route('/dekoratives')
 def dekoratives():
     return render_template('dekoratives.html')
 
-
 @app.route('/textiles')
 def textiles():
     return render_template('textiles.html')
+
+@app.route('/sonstiges')
+def sonstiges():
+    return render_template('sonstiges.html')
 
 
 # ===== CONTACT FORM =====

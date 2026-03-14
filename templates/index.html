@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ines Papierideen – handgemachte Glückwunschkarten, Einladungen, Geldgeschenke und Dekoratives aus Deiner Nachbarschaft.">
   <title>Ines Papierideen – Handgemachte Geschenkideen</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
 <!-- ===== NAVBAR ===== -->
-<nav class="navbar">
-  <a href="/" class="nav-logo">Ines Papierideen</a>
-  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+<nav class="navbar transparent" id="navbar">
+  <a href="/" class="nav-logo">Ines&nbsp;Papierideen</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links" id="nav-links">
+  <ul class="nav-links" role="list">
     <li><a href="#hero">Start</a></li>
-    <li><a href="#about">Über mich</a></li>
+    <li><a href="#about">Über uns</a></li>
     <li><a href="#angebot">Angebot</a></li>
     <li><a href="#kategorien">Kategorien</a></li>
     <li><a href="#team">Team</a></li>
@@ -27,40 +28,50 @@
 <!-- ===== HERO ===== -->
 <section class="hero" id="hero">
   <div class="hero-content">
-    <h1>Willkommen<br>bei Ines-<br>Papierideen</h1>
-    <p class="hero-subtitle">Individuelle &amp; persönliche Geschenkideen aus Deiner Nachbarschaft</p>
+    <span class="hero-eyebrow">Handgemacht mit Herz</span>
+    <h1>Willkommen bei<br><em>Ines-Papierideen</em></h1>
+    <div class="hero-divider"></div>
+    <p class="hero-subtitle">Individuelle &amp; persönliche Geschenkideen<br>aus Deiner Nachbarschaft</p>
     <p class="hero-text">
       Wir sind eine kleine Kreativwerkstatt, die mit Papier, Folie und Farbe
-      Deine Geschenke veredelt. Bei Ines-Papierideen steht Individualität
-      und Originalität im Mittelpunkt. Wir bereiten Vorschläge vor und
-      stimmen Deine Ideen genau auf Dich ab. Melde Dich bei Ines und
-      entdecke das Universum rund um Papierideen.
+      Deine Geschenke veredelt. Individualität und Originalität stehen bei uns
+      im Mittelpunkt.
     </p>
-    <a href="#kontakt" class="btn-hero">Kontakt</a>
+    <a href="#kontakt" class="hero-cta">
+      Kontakt aufnehmen
+      <span class="hero-cta-arrow">→</span>
+    </a>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">
+    <span>Entdecken</span>
+    <div class="scroll-hint-line"></div>
   </div>
 </section>
 
 <!-- ===== ABOUT ===== -->
 <section class="about" id="about">
   <div class="about-inner">
-    <div class="about-image">
-      <img src="/images/Team/IMG_20210220_190318__01__01_edited_edited.jpg" alt="Ines – die Kreative">
+    <div class="about-image reveal from-left">
+      <!-- Unique: original team photo, not used anywhere else -->
+      <img src="/images/Team/IMG_20210220_190318__01__01.jpg"
+           alt="Ines – die Kreative" loading="lazy">
     </div>
     <div class="about-text">
-      <h2>Über Ines-Papierideen</h2>
-      <h3>Hinter den Kulissen</h3>
-      <p>
+      <p class="section-label reveal delay-1">Über Ines-Papierideen</p>
+      <h2 class="reveal delay-2">Hinter den<br><em>Kulissen</em></h2>
+      <p class="reveal delay-3">
         Bei Ines-Papierideen sind wir einem einzigartigen und persönlichen
         Service verschrieben. Wenn Du uns einmal besucht hast, kannst Du
         sicher sein, dass Du immer die allerbeste Aufmerksamkeit bekommst.
       </p>
-      <p>
+      <p class="reveal delay-4">
         Seit unserer Gründung 2021 haben wir es uns zur Aufgabe gemacht,
-        alle Vorlieben und Wünsche bestmöglich umzusetzen – mit großzügigen
-        Angeboten, die perfekt zum Budget passen.
-        Nimm Kontakt auf und lass uns gemeinsam die perfekte Papieridee finden.
+        alle Vorlieben und Wünsche bestmöglich umzusetzen –
+        mit Angeboten, die perfekt zum Budget passen.
       </p>
-      <a href="#kontakt" class="btn-outline-white">Kontakt aufnehmen</a>
+      <a href="#kontakt" class="btn-ghost-white reveal delay-5">
+        Kontakt aufnehmen →
+      </a>
     </div>
   </div>
 </section>
@@ -68,110 +79,153 @@
 <!-- ===== ANGEBOT TEXT ===== -->
 <section class="offer-text" id="angebot">
   <div class="offer-inner">
-    <h2>Mein Angebot für Dich</h2>
-    <p>
+    <h2 class="reveal">Mein Angebot<br><em>für Dich</em></h2>
+    <p class="reveal delay-1">
       Dein Glückwunsch soll nicht von der Stange sein?<br>
       Dann schau doch gern bei mir vorbei.
     </p>
-    <p>
+    <p class="reveal delay-2">
       Wenn Du auf der Suche nach persönlichen und außergewöhnlichen
       Glückwunschkarten bist oder eine besondere Geschenkverpackung suchst,
       dann bist Du bei mir genau richtig.
     </p>
-    <p>
+    <p class="reveal delay-3">
       Einladungskarten, die in Erinnerung bleiben, Geldgeschenke, die Freude
-      machen und einzigartig sind, findest Du bei mir.<br>
-      Egal zu welchem Anlass – ob Hochzeit, Geburtstag, Geburt, Taufe,
-      Konfirmation, Kommunion, Ostern, Weihnachten …
+      machen und einzigartig sind – egal zu welchem Anlass:
+      Hochzeit, Geburtstag, Geburt, Taufe, Konfirmation, Kommunion,
+      Ostern, Weihnachten …
     </p>
-    <p>
-      Du hast besondere Ideen oder Wünsche?<br>
+    <p class="reveal delay-4">
+      Du hast besondere Ideen oder Wünsche?
       Kein Problem, gerne arbeite ich diese ein.
     </p>
-    <p class="offer-closing">Gemeinsam finden wir das perfekte Papiergeschenk.</p>
+    <p class="offer-closing reveal delay-5">
+      Gemeinsam finden wir das perfekte Papiergeschenk.
+    </p>
   </div>
 </section>
 
 <!-- ===== KATEGORIEN ===== -->
-<section id="kategorien">
+<!-- NOTE: Each thumbnail here is the EXCLUSIVE use of that image (not in gallery pages) -->
+<section id="kategorien" class="categories">
 
-  <!-- Glückwunschkarten -->
+  <!-- 01 Glückwunschkarten — thumbnail: IMG_20210807_144743.jpg -->
   <div class="category-card">
     <div class="category-image">
-      <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_215956.jpg" alt="Glückwunschkarten">
+      <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210807_144743.jpg"
+           alt="Glückwunschkarten" loading="lazy">
+      <div class="category-image-overlay"></div>
     </div>
     <div class="category-content">
-      <h3>Glückwunschkarten</h3>
-      <p>
-        Handgemachte Karten für jeden Anlass – Geburtstag, Hochzeit, Geburt,
-        Taufe oder einfach so. Jede Karte ist ein kleines Kunstwerk, das direkt
-        vom Herzen kommt und lange in Erinnerung bleibt.
+      <span class="category-num reveal">01</span>
+      <h3 class="reveal delay-1">Glückwunsch&shy;karten</h3>
+      <p class="reveal delay-2">
+        Handgemachte Karten für jeden Anlass – jede ein Unikat,
+        das direkt vom Herzen kommt und lange in Erinnerung bleibt.
       </p>
-      <a href="/glueckwunschkarten" class="btn-category">Mehr entdecken</a>
+      <a href="/glueckwunschkarten" class="btn-arrow reveal delay-3">
+        Mehr entdecken <span class="btn-arrow-icon">→</span>
+      </a>
     </div>
   </div>
 
-  <!-- Einladungskarten -->
+  <!-- 02 Einladungskarten — thumbnail: WhatsApp 19.06_edited -->
   <div class="category-card reverse">
     <div class="category-image">
-      <img src="/images/Einladungskarten/WhatsApp%20Image%202021-02-01%20at%2019.06_edited.jpg" alt="Einladungskarten">
+      <img src="/images/Einladungskarten/WhatsApp%20Image%202021-02-01%20at%2019.06_edited.jpg"
+           alt="Einladungskarten" loading="lazy">
+      <div class="category-image-overlay"></div>
     </div>
     <div class="category-content">
-      <h3>Einladungskarten</h3>
-      <p>
-        Einladungen, die in Erinnerung bleiben. Ob Hochzeit, Geburtstag,
-        Kommunion oder Konfirmation – ich gestalte Einladungen ganz nach
-        Eurem Thema, Stil und Budget. Handgemacht mit viel Liebe zum Detail.
+      <span class="category-num reveal">02</span>
+      <h3 class="reveal delay-1">Einladungs&shy;karten</h3>
+      <p class="reveal delay-2">
+        Einladungen, die Vorfreude wecken. Ob Hochzeit, Geburtstag oder
+        Kommunion – ich gestalte ganz nach Eurem Thema und Stil.
       </p>
-      <a href="/einladungskarten" class="btn-category">Mehr entdecken</a>
+      <a href="/einladungskarten" class="btn-arrow reveal delay-3">
+        Mehr entdecken <span class="btn-arrow-icon">→</span>
+      </a>
     </div>
   </div>
 
-  <!-- Geldgeschenke -->
+  <!-- 03 Geldgeschenke — thumbnail: IMG_20210912_081838_edited -->
   <div class="category-card">
     <div class="category-image">
-      <img src="/images/Geldgeschenke/IMG_20210912_081838_edited.jpg" alt="Geldgeschenke">
+      <img src="/images/Geldgeschenke/IMG_20210912_081838_edited.jpg"
+           alt="Geldgeschenke" loading="lazy">
+      <div class="category-image-overlay"></div>
     </div>
     <div class="category-content">
-      <h3>Geldgeschenke</h3>
-      <p>
+      <span class="category-num reveal">03</span>
+      <h3 class="reveal delay-1">Geld&shy;geschenke</h3>
+      <p class="reveal delay-2">
         Du möchtest Geld verschenken, aber mit dem gewissen Extra?
-        Ich mache alles möglich – was einst ein schlichter Schein war,
-        wird bei Ines-Papierideen zum echten Highlight des Abends.
+        Was einst ein schlichter Schein war, wird zum echten Highlight.
       </p>
-      <a href="/geldgeschenke" class="btn-category">Mehr entdecken</a>
+      <a href="/geldgeschenke" class="btn-arrow reveal delay-3">
+        Mehr entdecken <span class="btn-arrow-icon">→</span>
+      </a>
     </div>
   </div>
 
-  <!-- Dekoratives -->
+  <!-- 04 Dekoratives — thumbnail: IMG-20220611-WA0006 -->
   <div class="category-card reverse">
     <div class="category-image">
-      <img src="/images/Dekoratives/IMG-20220611-WA0006.jpeg" alt="Dekoratives">
+      <img src="/images/Dekoratives/IMG-20220611-WA0006.jpeg"
+           alt="Dekoratives" loading="lazy">
+      <div class="category-image-overlay"></div>
     </div>
     <div class="category-content">
-      <h3>Dekoratives</h3>
-      <p>
-        Windlichter, Gläser, Tassen und mehr – liebevoll dekoriert und
-        individuell gestaltet. Dinge, die man nicht kaufen kann, weil sie
-        von Herzen kommen. Das perfekte Geschenk für jeden Anlass.
+      <span class="category-num reveal">04</span>
+      <h3 class="reveal delay-1">Dekoratives</h3>
+      <p class="reveal delay-2">
+        Windlichter, Gläser, Tassen – liebevoll dekoriert und individuell
+        gestaltet. Dinge, die man nicht kaufen kann, weil sie von Herzen kommen.
       </p>
-      <a href="/dekoratives" class="btn-category">Mehr entdecken</a>
+      <a href="/dekoratives" class="btn-arrow reveal delay-3">
+        Mehr entdecken <span class="btn-arrow-icon">→</span>
+      </a>
     </div>
   </div>
 
-  <!-- Textiles -->
+  <!-- 05 Textiles — thumbnail: IMG_20210110_141941 -->
   <div class="category-card">
     <div class="category-image">
-      <img src="/images/Textiles/IMG_20210110_141941.jpg" alt="Textiles">
+      <img src="/images/Textiles/IMG_20210110_141941.jpg"
+           alt="Textiles" loading="lazy">
+      <div class="category-image-overlay"></div>
     </div>
     <div class="category-content">
-      <h3>Textiles</h3>
-      <p>
-        Shirts, Taschen, Babykleidung und mehr – individuell mit Schablone,
-        Folie oder Farbe gestaltet. Einzigartig wie Du. Egal ob klein oder
-        groß, jedes Stück ist ein echtes Unikat.
+      <span class="category-num reveal">05</span>
+      <h3 class="reveal delay-1">Textiles</h3>
+      <p class="reveal delay-2">
+        Shirts, Taschen, Babykleidung – individuell mit Schablone, Folie
+        oder Farbe gestaltet. Einzigartig wie Du.
       </p>
-      <a href="/textiles" class="btn-category">Mehr entdecken</a>
+      <a href="/textiles" class="btn-arrow reveal delay-3">
+        Mehr entdecken <span class="btn-arrow-icon">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- 06 Sonstiges — thumbnail: IMG_20210707_201245 -->
+  <div class="category-card reverse">
+    <div class="category-image">
+      <img src="/images/Sonstiges/IMG_20210707_201245.jpg"
+           alt="Sonstiges" loading="lazy">
+      <div class="category-image-overlay"></div>
+    </div>
+    <div class="category-content">
+      <span class="category-num reveal">06</span>
+      <h3 class="reveal delay-1">Sonstiges</h3>
+      <p class="reveal delay-2">
+        Noch mehr kreative Ideen – von individuellen Aufklebern bis hin zu
+        ganz persönlichen Überraschungen. Lass Dich inspirieren!
+      </p>
+      <a href="/sonstiges" class="btn-arrow reveal delay-3">
+        Mehr entdecken <span class="btn-arrow-icon">→</span>
+      </a>
     </div>
   </div>
 
@@ -179,28 +233,86 @@
 
 <!-- ===== TEAM ===== -->
 <section class="team" id="team">
-  <h2>Unser Team</h2>
-  <p class="team-subtitle">Exzellenz an erster Stelle</p>
+  <div class="team-header">
+    <p class="section-label reveal">Persönlich kennenlernen</p>
+    <h2 class="reveal delay-1">Unser <em>Team</em></h2>
+  </div>
   <div class="team-grid">
 
-    <div class="team-member">
-      <img src="/images/Team/IMG_20210220_190318__01__01_edited_edited.jpg" alt="Ines">
-      <div class="team-member-info">
+    <!-- Ines (2 photos – original used in About) -->
+    <div class="team-member reveal">
+      <img src="/images/Team/IMG_20210220_190318__01__01_edited.jpg"
+           alt="Ines" loading="lazy">
+      <div class="team-overlay">
         <h4>Ines die Kreative</h4>
+        <p>Gründerin &amp; Designerin</p>
+      </div>
+    </div>
+    <div class="team-member reveal delay-1">
+      <img src="/images/Team/IMG_20210220_190318__01__01_edited_edited.jpg"
+           alt="Ines" loading="lazy">
+      <div class="team-overlay">
+        <h4>Ines die Kreative</h4>
+        <p>Gründerin &amp; Designerin</p>
       </div>
     </div>
 
-    <div class="team-member">
-      <img src="/images/Team/WhatsApp%20Image%202021-02-14%20at%2014.03.42%20(1).jpeg" alt="Lisa">
-      <div class="team-member-info">
+    <!-- Lisa (3 photos) -->
+    <div class="team-member reveal delay-2">
+      <img src="/images/Team/WhatsApp%20Image%202021-02-14%20at%2014.03.42%20(1).jpeg"
+           alt="Lisa" loading="lazy">
+      <div class="team-overlay">
+        <h4>Lisa der Nerd</h4>
+        <p>Administratorin</p>
+      </div>
+    </div>
+    <div class="team-member reveal delay-3">
+      <img src="/images/Team/WhatsApp%20Image%202021-02-14%20at%2014.04.26%20(1).jpeg"
+           alt="Lisa" loading="lazy">
+      <div class="team-overlay">
+        <h4>Lisa der Nerd</h4>
+        <p>Administratorin</p>
+      </div>
+    </div>
+    <div class="team-member reveal delay-4">
+      <img src="/images/Team/WhatsApp%20Image%202021-02-14%20at%2014.05.37%20(1).jpeg"
+           alt="Lisa" loading="lazy">
+      <div class="team-overlay">
         <h4>Lisa der Nerd</h4>
         <p>Administratorin</p>
       </div>
     </div>
 
-    <div class="team-member">
-      <img src="/images/Team/WhatsApp%20Image%202021-02-16%20at%2021.04.14%20(1).jpeg" alt="Heide">
-      <div class="team-member-info">
+    <!-- Heide (4 photos) -->
+    <div class="team-member reveal delay-1">
+      <img src="/images/Team/WhatsApp%20Image%202021-02-16%20at%2021.04.14%20(1).jpeg"
+           alt="Heide" loading="lazy">
+      <div class="team-overlay">
+        <h4>Heide die Schreckliche</h4>
+        <p>Qualitätskontrolle</p>
+      </div>
+    </div>
+    <div class="team-member reveal delay-2">
+      <img src="/images/Team/WhatsApp%20Image%202021-02-16%20at%2021.04.14.jpeg"
+           alt="Heide" loading="lazy">
+      <div class="team-overlay">
+        <h4>Heide die Schreckliche</h4>
+        <p>Qualitätskontrolle</p>
+      </div>
+    </div>
+    <div class="team-member reveal delay-3">
+      <img src="/images/Team/WhatsApp%20Image%202021-02-16%20at%2021.04_edited.jpg"
+           alt="Heide" loading="lazy">
+      <div class="team-overlay">
+        <h4>Heide die Schreckliche</h4>
+        <p>Qualitätskontrolle</p>
+      </div>
+    </div>
+    <!-- File with literal %20 in filename → double-encode %25 20 -->
+    <div class="team-member reveal delay-4">
+      <img src="/images/Team/WhatsApp%2520Image%25202021-02-16%2520at%252021_edited.jpg"
+           alt="Heide" loading="lazy">
+      <div class="team-overlay">
         <h4>Heide die Schreckliche</h4>
         <p>Qualitätskontrolle</p>
       </div>
@@ -212,31 +324,82 @@
 <!-- ===== KONTAKT ===== -->
 <section class="contact" id="kontakt">
   <div class="contact-inner">
-    <h2>Kontakt</h2>
-    <form action="/kontakt" method="POST">
-      <input type="text"  name="name"    placeholder="Dein Name"     required>
-      <input type="email" name="email"   placeholder="Deine E-Mail"  required>
-      <textarea            name="message" placeholder="Deine Nachricht" rows="6" required></textarea>
-      <button type="submit">Nachricht senden</button>
+    <p class="section-label reveal">Jetzt anfragen</p>
+    <h2 class="reveal delay-1">Schreib <em>mir</em></h2>
+    <p class="contact-sub reveal delay-2">
+      Du hast eine Idee oder einen besonderen Anlass?<br>
+      Ich freue mich auf Deine Nachricht.
+    </p>
+    <form action="/kontakt" method="POST" class="reveal delay-3">
+      <div class="field">
+        <input type="text"  name="name"    id="f-name"  placeholder=" " required>
+        <label for="f-name">Dein Name</label>
+      </div>
+      <div class="field">
+        <input type="email" name="email"   id="f-email" placeholder=" " required>
+        <label for="f-email">Deine E-Mail-Adresse</label>
+      </div>
+      <div class="field">
+        <textarea name="message" id="f-msg" rows="5" placeholder=" " required></textarea>
+        <label for="f-msg">Deine Nachricht</label>
+      </div>
+      <button type="submit" class="btn-submit">
+        Nachricht absenden <span>→</span>
+      </button>
     </form>
   </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <p>© 2026 Ines Papierideen &nbsp;|&nbsp; Mit ♥ handgemacht</p>
+  <span class="footer-logo">Ines Papierideen</span>
+  <span class="footer-copy">© 2026 · Gemacht mit <span class="footer-heart">♥</span></span>
 </footer>
 
-<script>
-  // Mobile hamburger menu
-  const btn = document.getElementById('hamburger');
-  const links = document.getElementById('nav-links');
-  btn.addEventListener('click', () => links.classList.toggle('open'));
+<!-- ===== FLOATING CTA ===== -->
+<a href="#kontakt" class="floating-cta" id="floatingCta" aria-label="Kontakt aufnehmen">
+  Kontakt →
+</a>
 
-  // Close on link click
-  links.querySelectorAll('a').forEach(a =>
-    a.addEventListener('click', () => links.classList.remove('open'))
-  );
+<script>
+  const navbar      = document.getElementById('navbar');
+  const hero        = document.getElementById('hero');
+  const floatingCta = document.getElementById('floatingCta');
+  const hamburger   = document.getElementById('hamburger');
+  const navLinks    = document.getElementById('nav-links');
+
+  /* Navbar transparency tied to hero visibility */
+  const navObs = new IntersectionObserver(([e]) => {
+    navbar.classList.toggle('transparent', e.isIntersecting);
+    navbar.classList.toggle('solid', !e.isIntersecting);
+  }, { threshold: 0.05 });
+  navObs.observe(hero);
+
+  /* Floating CTA appears once hero scrolls out */
+  const ctaObs = new IntersectionObserver(([e]) => {
+    floatingCta.classList.toggle('visible', !e.isIntersecting);
+  }, { threshold: 0.8 });
+  ctaObs.observe(hero);
+
+  /* Scroll reveal */
+  const revObs = new IntersectionObserver((entries) => {
+    entries.forEach(el => {
+      if (el.isIntersecting) { el.target.classList.add('visible'); revObs.unobserve(el.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+  /* Mobile hamburger */
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }));
 </script>
 
 </body>

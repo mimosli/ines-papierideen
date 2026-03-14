@@ -8,84 +8,108 @@
 </head>
 <body>
 
-<nav class="navbar">
-  <a href="/" class="nav-logo">Ines Papierideen</a>
-  <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+<nav class="navbar solid" id="navbar">
+  <a href="/" class="nav-logo">Ines&nbsp;Papierideen</a>
+  <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
-  <ul class="nav-links" id="nav-links">
+  <ul class="nav-links" role="list">
     <li><a href="/#hero">Start</a></li>
-    <li><a href="/#about">Über mich</a></li>
-    <li><a href="/#angebot">Angebot</a></li>
     <li><a href="/#kategorien">Kategorien</a></li>
-    <li><a href="/#team">Team</a></li>
     <li><a href="/#kontakt">Kontakt</a></li>
   </ul>
 </nav>
 
 <section class="page-hero">
-  <h1>Glückwunschkarten</h1>
-  <p>Handgemachte Karten für jeden Anlass – jede ein Unikat mit Herz.</p>
+  <div class="page-hero-inner">
+    <p class="section-label">Kategorie</p>
+    <h1>Glückwunsch&shy;<em>karten</em></h1>
+    <p>Handgemachte Karten für jeden Anlass – jede ein Unikat, das von Herzen kommt.</p>
+  </div>
 </section>
 
 <section class="gallery-section">
-  <a href="/" class="back-link">← Zurück zur Startseite</a>
+  <a href="/" class="gallery-back">
+    <span class="gallery-back-arrow">←</span> Zurück zur Startseite
+  </a>
 
-  <div class="masonry-grid">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_215956.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_220030.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_220049.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_220105.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210711_160410_edited.jpg"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210711_160504_edited.jpg"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210807_144743.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210812_152722.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210814_142232_edited.jpg"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210814_142244.jpg"         alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210814_142330_edited.png"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210820_083141_410_208511648428599.webp" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210926_125455_edited.jpg"  alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01.07.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01.08.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01.09.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01_edited.jpg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.03_edited.jpg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.06_edited.jpg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-16%20at%2022.45_edited.jpg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/IMG-20260118-WA0002.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
-    <img src="/images/IMG-20260118-WA0003.jpeg" alt="Glückwunschkarte" onclick="openLightbox(this.src)">
+  <div class="masonry-grid" id="gallery">
+    <!-- 13 IMG_ files (minus IMG_20210807_144743.jpg — used as index thumbnail) -->
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_215956.jpg"         alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_220030.jpg"         alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_220049.jpg"         alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210522_220105.jpg"         alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210711_160410_edited.jpg"  alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210711_160504_edited.jpg"  alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210812_152722.jpg"         alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210814_142232_edited.jpg"  alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210814_142244.jpg"         alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210814_142330_edited.png"  alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210820_083141_410_208511648428599.webp" alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/IMG_20210926_125455_edited.jpg"  alt="Glückwunschkarte" loading="lazy">
+    <!-- 7 WhatsApp files (with spaces as %20) -->
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01.07.jpeg"   alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01.08.jpeg"   alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01.09.jpeg"   alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.01_edited.jpg" alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.03_edited.jpg" alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-01%20at%2019.06_edited.jpg" alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%20Image%202021-02-16%20at%2022.45_edited.jpg" alt="Glückwunschkarte" loading="lazy">
+    <!-- 2 files with LITERAL %20 in filename on disk → double-encode as %25 20 -->
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%2520Image%25202021-02-01%2520at%252019_edited.jpg" alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/Gl%C3%BCckwunschkarten/WhatsApp%2520Image%25202021-02-22%2520at%252017_edited.jpg" alt="Glückwunschkarte" loading="lazy">
+    <!-- 2 root-level images -->
+    <img src="/images/IMG-20260118-WA0002.jpeg" alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/IMG-20260118-WA0003.jpeg" alt="Glückwunschkarte" loading="lazy">
+    <!-- karte1/2/3 from root -->
+    <img src="/images/karte1.jpg" alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/karte2.jpg" alt="Glückwunschkarte" loading="lazy">
+    <img src="/images/karte3.jpg" alt="Glückwunschkarte" loading="lazy">
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Ines Papierideen &nbsp;|&nbsp; Mit ♥ handgemacht</p>
+  <span class="footer-logo">Ines Papierideen</span>
+  <span class="footer-copy">© 2026 · Gemacht mit <span class="footer-heart">♥</span></span>
 </footer>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
-  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-  <img id="lightbox-img" src="" alt="Vergrößerte Ansicht">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Bildvorschau">
+  <button class="lightbox-close" id="lb-close" aria-label="Schließen">✕</button>
+  <div class="lightbox-inner">
+    <button class="lightbox-nav" id="lb-prev" aria-label="Vorheriges Bild">‹</button>
+    <img id="lb-img" src="" alt="Vergrößerte Ansicht">
+    <button class="lightbox-nav" id="lb-next" aria-label="Nächstes Bild">›</button>
+  </div>
+  <span class="lightbox-counter" id="lb-counter"></span>
 </div>
 
 <script>
-  const btn = document.getElementById('hamburger');
-  const links = document.getElementById('nav-links');
-  btn.addEventListener('click', () => links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a =>
-    a.addEventListener('click', () => links.classList.remove('open'))
-  );
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open'); hamburger.classList.remove('open');
+  }));
 
-  function openLightbox(src) {
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('open');
-    document.body.style.overflow = '';
-  }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  const imgs = Array.from(document.querySelectorAll('#gallery img'));
+  const imgObs = new IntersectionObserver(e => e.forEach(x => { if (x.isIntersecting) x.target.classList.add('loaded'); }), { threshold: 0.05 });
+  imgs.forEach(img => { img.addEventListener('load', () => img.classList.add('loaded')); if (img.complete) img.classList.add('loaded'); imgObs.observe(img); });
+
+  let cur = 0;
+  const lb = document.getElementById('lightbox'), lbImg = document.getElementById('lb-img'), lbCnt = document.getElementById('lb-counter');
+  function openLb(i) { cur=i; lbImg.src=imgs[i].src; lbCnt.textContent=(i+1)+' / '+imgs.length; lb.classList.add('open'); document.body.style.overflow='hidden'; }
+  function closeLb() { lb.classList.remove('open'); document.body.style.overflow=''; }
+  function nav(d) { cur=(cur+d+imgs.length)%imgs.length; lbImg.src=imgs[cur].src; lbCnt.textContent=(cur+1)+' / '+imgs.length; }
+  imgs.forEach((img,i) => img.addEventListener('click', () => openLb(i)));
+  document.getElementById('lb-close').addEventListener('click', closeLb);
+  document.getElementById('lb-prev').addEventListener('click', e => { e.stopPropagation(); nav(-1); });
+  document.getElementById('lb-next').addEventListener('click', e => { e.stopPropagation(); nav(+1); });
+  lb.addEventListener('click', e => { if (e.target===lb) closeLb(); });
+  document.addEventListener('keydown', e => { if (!lb.classList.contains('open')) return; if (e.key==='Escape') closeLb(); if (e.key==='ArrowLeft') nav(-1); if (e.key==='ArrowRight') nav(+1); });
 </script>
-
 </body>
 </html>
